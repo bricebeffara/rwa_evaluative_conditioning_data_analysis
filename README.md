@@ -1,9 +1,7 @@
 ---
 title: "RWA Evaluative Conditioning Data Analysis"
 output:
-  html_document:
-    self_contained: false
-    lib_dir: libs
+  html_document
 ---
 
 ```{r}
