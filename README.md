@@ -1,4 +1,10 @@
-# rwa_evaluative_conditioning_data_analysis
+---
+title: "RWA Evaluative Conditioning Data Analysis"
+output:
+  html_document:
+    self_contained: false
+    lib_dir: libs
+---
 
 ```{r}
 curwd <- dirname(rstudioapi::getActiveDocumentContext()$path)
@@ -27,18 +33,18 @@ The name of the scripts start by a number. When running scripts for the first ti
 - <span style="color:#5a3371">**02c_models_simple_pos.R**</span> &rarr; Bayesian ordinal models analysing the asociation between RWA and evaluation in the positive valence condition for each individual study and the IDA.
 - <span style="color:#5a3371">**03_lme4_models_ida.R**</span> &rarr; Frequentist metric models analysing the interaction between RWA and Valence for each individual study and the IDA (not necessary, analyses not included in the article).
 - <span style="color:#5a3371">**04a_marg_plots_fitted_IDA**</span> &rarr; Plots from Bayesian ordinal models (e.g. see below)
-![](ida/plots/marg_IDA_cc.png)
+![](ida/plots/marg_IDA_cc.png){width=50%}
 - <span style="color:#5a3371">**04b_marg_plots_linear_IDA.R**</span> &rarr; Spaghetti plots from Bayesian ordinal models
 - <span style="color:#5a3371">**04c_plot_point_IDA.R**</span> &rarr; Plot data points and merge the spaghetti plot with the data plot (e.g. see below)
-![](ida/plots/data_spag_IDA_cc.png)
+![](ida/plots/data_spag_IDA_cc.png){width=50%}
 - <span style="color:#5a3371">**05a_plot_ida_interact.R**</span> &rarr; Forest plot for the interaction (e.g. see below)
-![](ida/plots/forest_interact_ECC_eng.png)
+![](ida/plots/forest_interact_ECC_eng.png){width=50%}
 - <span style="color:#5a3371">**05b_plot_ida_simple_neg.R**</span> &rarr; Forest plot for the simple slope of RWA in the negative condition (e.g. see below)
-![](ida/plots/forest_simple_neg_ECC_eng.png)
+![](ida/plots/forest_simple_neg_ECC_eng.png){width=50%}
 - <span style="color:#5a3371">**05a_plot_ida_simple_pos.R**</span> &rarr; Forest plot for the simple slope of RWA in the positive condition (e.g. see below)
-![](ida/plots/forest_simple_pos_ECC_eng.png)
+![](ida/plots/forest_simple_pos_ECC_eng.png){width=50%}
 - <span style="color:#5a3371">**05a_plot_ida_simple_pos.R**</span> and <span style="color:#5a3371">**kable_param_ida.Rmd**</span> &rarr; Produces html tables for the results of the IDA (e.g. see below). *This script should be ignored as it is no longer used in the final version of the article*.
-![](ida/tables/summary_table_ida.png)
+![](ida/tables/summary_table_ida.png){width=75%}
 - <span style="color:#5a3371">**plots**</span> &rarr; Contains the plots of the article
 - <span style="color:#5a3371">**tables**</span> &rarr; Contained the tables of the article. *This folder should be ignored as it is no longer used in the final version of the article*.
 - <span style="color:#5a3371">**XPXX.csv**</span> &rarr; Data frame for each individual study
