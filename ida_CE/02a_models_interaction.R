@@ -156,6 +156,7 @@ IDA_resp <- brm(response ~ usvalence * RWAscore + (1|ppt) + (1|stim1) + (1|XP),
                 control = list(adapt_delta = 0.9999, max_treedepth = 10),
                 sample_prior = TRUE)
 
+#Model without interaction
 IDA_resp_woint <- brm(response ~ usvalence + RWAscore + (1|ppt) + (1|stim1) + (1|XP),
                         data = IDA, 
                         family = cumulative (link = "logit", threshold = "flexible"),
@@ -180,6 +181,8 @@ model_gen_IDA <- model_parameters(IDA_resp,
                                   ci_method = "HDI",
                                   rope_range = c(-0.13, 0.13),
                                   rope_ci = 1)
+#Table of the supp mat
+tab_model(IDA_resp)
 
 model_gen_IDA_woint <- model_parameters(IDA_resp_woint,
                                   centrality = "median",
@@ -217,7 +220,7 @@ grid.arrange(p)
 dev.off()
 
 #------------------------------------------------------------------------------------
-# IDA valence = qualitative label (positive vs. negative)
+# IDA valence = qualitative label (positive vs. negative) !!!NOT NECESSARY!!!
 #------------------------------------------------------------------------------------
 
 # model

@@ -550,6 +550,10 @@ IDAcc_resp <- brm(response ~ usvalence  * RWAscore + (1|ppt) + (1|stim1) + (1|XP
                 control = list(adapt_delta = 0.8, max_treedepth = 10),
                 sample_prior = TRUE)
 
+#Table of the supp mat
+tab_model(IDAcc_resp)
+
+#Model without interaction
 IDAcc_resp_woint <- brm(response ~ usvalence + RWAscore + (1|ppt) + (1|stim1) + (1|XP),
                   data = IDAcc, 
                   family = cumulative (link = "logit", threshold = "flexible"),
@@ -608,7 +612,7 @@ grid.arrange(p)
 dev.off()
 
 #------------------------------------------------------------------------------------
-# IDA valence = qualitative label (positive vs. negative)
+# IDA valence = qualitative label (positive vs. negative) !!!NOT NECESSARY!!!
 #------------------------------------------------------------------------------------
 
 # model
